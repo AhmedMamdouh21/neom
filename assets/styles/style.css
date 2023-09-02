@@ -342,6 +342,7 @@
   -webkit-box-shadow: none;
           box-shadow: none;
   border: none;
+  padding: 0;
 }
 
 .navbar-fixed .navbar-toggler .toggler-icon {
