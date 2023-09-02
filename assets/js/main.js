@@ -400,7 +400,7 @@ function openModal(id) {
             <div class="img-person mx-auto mb-3">
             <img
                 class="img-fit"
-                src="${dataCardLists[id].image}"
+                src="${dataCardLists[id].image}-${dataCardLists[id].id}.png"
                 alt="${dataCardLists[id].title}"
             />
             </div>
