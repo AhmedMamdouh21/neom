@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="ar">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <meta name="author" content="Wotn" />
+    <meta property="og:title" content="NEOM" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="" />
+    <meta property="og:image" content="" />
+    <meta property="og:image:alt" content=""/>
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicon.png"/>
+    <title>NEOM</title>
+    <!-- Start Styles -->
+    <link rel="stylesheet" href="assets/styles/style.css" />
+    <!-- End Styles -->
+  </head>
+  <body>
+    <!-- Start Loader -->
+    <div class="loader">
+      <div class="logo">
+        <img class="img-fluid" src="assets/img/logo.png" alt="logo">
+      </div>
+    </div>
+    <!-- End Loader -->
+    <!-- Start NavBar -->
+    <nav class="navbar navbar-fixed fixed-top navbar-expand-lg">
+      <div class="container-layout d-flex align-items-center justify-content-between justify-content-lg-start">
+        <a class="navbar-brand" href="index.html">
+          <img class="img-fluid" src="assets/img/logo.png" alt="logo" />
+        </a>
+        <button
+          class="navbar-toggler collapsed"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">الرئيسية</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">الوظائف</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">الشركاء</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="index.html">الموهوبين</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">من نحن</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">تواصل معنا</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- End NavBar -->
+
+    <!-- Start Header -->
+    <header class="header d-flex align-items-end justify-content-center">
+      <div class="banner h-100">
+        <img class="img-fit" src="assets/img/banner.jpg" alt="banner" />
+      </div>
+      <div class="info text-center">
+        <p class="sub-title font-bold clr-main mb-2">قائمة</p>
+        <h1 class="title-lg font-bold">المتقدمين</h1>
+      </div>
+    </header>
+    <!-- End Header -->
+
+    <!-- Start Card List -->
+    <section class="cards-list container-layout my-section">
+      <div class="d-flex align-items-center justify-content-between">
+        <div class="checkbox-group">
+          <input type="checkbox" id="check-all" />
+          <label for="check-all">
+            <span class="ms-1">تحديد الكل</span>
+          </label>
+        </div>
+        <div  class="deleteAll"></div>
+      </div>
+      <div class="row container-cards">
+         <!--<div class="col-lg-4 col-md-6 my-3">
+           <div class="card-info">
+           <div class="top d-flex align-items-center justify-content-between">
+              <div class="dropdown">
+                <button
+                  class="dropdown-toggle"
+                  type="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  <svg width="30" height="9" viewBox="0 0 37 9" fill="none">
+                    <ellipse
+                      cx="31.8958"
+                      cy="4.5"
+                      rx="4.83009"
+                      ry="4.5"
+                      fill="#B89635"
+                    />
+                    <ellipse
+                      cx="18.9671"
+                      cy="4.5"
+                      rx="4.83009"
+                      ry="4.5"
+                      fill="#B89635"
+                    />
+                    <ellipse
+                      cx="5.04373"
+                      cy="4.5"
+                      rx="4.83011"
+                      ry="4.5"
+                      fill="#B89635"
+                    />
+                  </svg>
+                </button>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">Action</a></li>
+                  <li><a class="dropdown-item" href="#">Another action</a></li>
+                </ul>
+              </div>
+              <div class="checkbox-group">
+                <input type="checkbox" value="one" id="one" />
+                <label for="one"></label>
+              </div>
+            </div>
+            <div class="text-center">
+              <div class="img-person mx-auto mb-3">
+                <img
+                  class="img-fit"
+                  src="assets/img/person-1.png"
+                  alt="person"
+                />
+              </div>
+              <h2 class="title text-body font-bold">محمود مصطفى</h2>
+              <p class="status d-inline-block reject">مرفوض</p>
+              <div class="d-flex flex-column align-items-center">
+                <a
+                  class="email d-flex align-items-center justify-content-center mb-3"
+                  href="mailto:m.youssef@wten.com.sa"
+                >
+                  <span>m.youssef@wten.com.sa</span>
+                  <svg
+                    class="icon ms-1"
+                    width="19"
+                    height="15"
+                    viewBox="0 0 19 15"
+                  >
+                    <path
+                      d="M3 0H16C16.7956 0 17.5587 0.316071 18.1213 0.87868C18.6839 1.44129 19 2.20435 19 3V12C19 12.7956 18.6839 13.5587 18.1213 14.1213C17.5587 14.6839 16.7956 15 16 15H3C2.20435 15 1.44129 14.6839 0.87868 14.1213C0.316071 13.5587 0 12.7956 0 12V3C0 2.20435 0.316071 1.44129 0.87868 0.87868C1.44129 0.316071 2.20435 0 3 0ZM3 1C2.5 1 2.06 1.17 1.72 1.47L9.5 6.5L17.28 1.47C16.94 1.17 16.5 1 16 1H3ZM9.5 7.71L1.13 2.28C1.05 2.5 1 2.75 1 3V12C1 12.5304 1.21071 13.0391 1.58579 13.4142C1.96086 13.7893 2.46957 14 3 14H16C16.5304 14 17.0391 13.7893 17.4142 13.4142C17.7893 13.0391 18 12.5304 18 12V3C18 2.75 17.95 2.5 17.87 2.28L9.5 7.71Z"
+                      fill="#B89635"
+                    />
+                  </svg>
+                </a>
+                <a
+                  class="phone d-flex align-items-center justify-content-center"
+                  href="tel:0534444445"
+                >
+                  <span>0534444445</span>
+                  <svg
+                    class="icon ms-1"
+                    width="20"
+                    height="20"
+                    viewBox="0 0 20 20"
+                    fill="none"
+                  >
+                    <path
+                      d="M14.6076 20C6.55254 20 0 13.4475 0 5.39243C0.00170702 4.07297 0.483248 2.79918 1.35483 1.80857C2.22641 0.817966 3.42853 0.17817 4.73703 0.00849117C5.00627 -0.0228908 5.27846 0.0332138 5.51334 0.168507C5.74823 0.3038 5.93333 0.511097 6.04128 0.759738L8.13851 5.65328C8.2197 5.84316 8.25266 6.05019 8.23446 6.2559C8.21625 6.46162 8.14744 6.65964 8.03417 6.83232L6.30212 9.48255C6.26154 9.54161 6.23727 9.61035 6.23177 9.6818C6.22627 9.75326 6.23975 9.82489 6.27082 9.88947C7.09319 11.5766 8.46077 12.9368 10.1523 13.75C10.215 13.7813 10.285 13.7949 10.3549 13.7894C10.4247 13.7839 10.4917 13.7594 10.5488 13.7187L13.1677 11.9763C13.3403 11.8586 13.5398 11.7864 13.7477 11.7664C13.9556 11.7463 14.1652 11.779 14.3572 11.8615L19.2403 13.9587C19.4889 14.0667 19.6962 14.2518 19.8315 14.4867C19.9668 14.7215 20.0229 14.9937 19.9915 15.263C19.8218 16.5715 19.182 17.7736 18.1914 18.6452C17.2008 19.5168 15.927 19.9983 14.6076 20ZM4.89354 0.832776H4.84137C3.73392 0.977125 2.71678 1.51932 1.97958 2.35826C1.24239 3.1972 0.83548 4.27561 0.834719 5.39243C0.837482 9.04437 2.28943 12.5459 4.87175 15.1283C7.45406 17.7106 10.9556 19.1625 14.6076 19.1653C15.7244 19.1645 16.8028 18.7576 17.6417 18.0204C18.4807 17.2832 19.0229 16.2661 19.1672 15.1586C19.1759 15.0687 19.1552 14.9784 19.1081 14.9012C19.0611 14.8241 18.9903 14.7643 18.9064 14.7308L14.0233 12.6336C13.9598 12.6054 13.8903 12.5935 13.8211 12.599C13.7518 12.6045 13.685 12.6271 13.6268 12.6649L11.0183 14.4074C10.8391 14.5291 10.6312 14.6018 10.4152 14.6182C10.1992 14.6347 9.98266 14.5944 9.78708 14.5013C7.93058 13.6016 6.42838 12.1067 5.51958 10.2547C5.42697 10.0594 5.38602 9.84373 5.40063 9.62816C5.41525 9.41259 5.48494 9.20438 5.60305 9.02345L7.33509 6.37322C7.3738 6.31533 7.397 6.24848 7.40248 6.17906C7.40796 6.10964 7.39553 6.03997 7.36639 5.97673L5.26916 1.09363C5.23989 1.01752 5.18844 0.951955 5.12146 0.905443C5.05448 0.858932 4.97508 0.833615 4.89354 0.832776Z"
+                      fill="#B89635"
+                    />
+                  </svg>
+                </a>
+              </div>
+            </div>
+            <div class="details my-3">
+              <div class="row">
+                <div class="col-md-6 d-flex align-items-center my-1">
+                  <h6 class="mb-0 font-regular">الجنسية:</h6>
+                  <p class="font-bold mb-0 ms-1">سعودي</p>
+                </div>
+                <div class="col-md-6 d-flex align-items-center my-1">
+                  <h6 class="mb-0 font-regular">تاريخ الميلاد:</h6>
+                  <p class="font-bold mb-0 ms-1">2/2/1997</p>
+                </div>
+                <div class="col-md-6 d-flex align-items-center my-1">
+                  <h6 class="mb-0 font-regular">محل الإقامة:</h6>
+                  <p class="font-bold mb-0 ms-1">السعودية</p>
+                </div>
+                <div class="col-md-6 d-flex align-items-center my-1">
+                  <h6 class="mb-0 font-regular">المؤهل:</h6>
+                  <p class="font-bold mb-0 ms-1">بكاليريوس</p>
+                </div>
+              </div>
+            </div>
+            <div class="d-flex flex-column align-items-center">
+              <a
+                class="cv clr-main mb-2"
+                href="assets/pdf/Ahmed-Mamdouh-resume.pdf"
+                target="_blank"
+                >السيرة الذاتية</a
+              >
+              <a
+                class="intro-video clr-main"
+                href="https://www.youtube.com/watch?v=qTUc_LaC48o&t=2s"
+                target="_blank"
+                >الفيديو التعريفي</a
+              >
+            </div>
+
+            <div class="text-center mt-4">
+              <button
+                type="button"
+                class="btn-main"
+                data-bs-toggle="modal"
+                data-bs-target="#deatailsModal"
+              >
+                عرض التفاصيل
+              </button>
+            </div>
+
+            <div
+              class="modal deatails-modal fade"
+              id="deatailsModal"
+              tabindex="-1"
+              aria-labelledby="deatailsModalLabel"
+              aria-hidden="true"
+            >
+              <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                  <button
+                    type="button"
+                    class="btn-close"
+                    data-bs-dismiss="modal"
+                    aria-label="Close"
+                  ></button>
+                  <div class="modal-body">
+                    <div class="text-center">
+                      <div class="img-person mx-auto mb-3">
+                        <img
+                          class="img-fit"
+                          src="assets/img/person-1.png"
+                          alt="person"
+                        />
+                      </div>
+                      <h2 class="title text-body font-bold">محمود مصطفى</h2>
+                      <p class="status d-inline-block reject">مرفوض</p>
+                      <div class="d-flex flex-column align-items-center">
+                        <a
+                          class="email d-flex align-items-center justify-content-center mb-3"
+                          href="mailto:m.youssef@wten.com.sa"
+                        >
+                          <span>m.youssef@wten.com.sa</span>
+                          <svg
+                            class="icon ms-1"
+                            width="19"
+                            height="15"
+                            viewBox="0 0 19 15"
+                          >
+                            <path
+                              d="M3 0H16C16.7956 0 17.5587 0.316071 18.1213 0.87868C18.6839 1.44129 19 2.20435 19 3V12C19 12.7956 18.6839 13.5587 18.1213 14.1213C17.5587 14.6839 16.7956 15 16 15H3C2.20435 15 1.44129 14.6839 0.87868 14.1213C0.316071 13.5587 0 12.7956 0 12V3C0 2.20435 0.316071 1.44129 0.87868 0.87868C1.44129 0.316071 2.20435 0 3 0ZM3 1C2.5 1 2.06 1.17 1.72 1.47L9.5 6.5L17.28 1.47C16.94 1.17 16.5 1 16 1H3ZM9.5 7.71L1.13 2.28C1.05 2.5 1 2.75 1 3V12C1 12.5304 1.21071 13.0391 1.58579 13.4142C1.96086 13.7893 2.46957 14 3 14H16C16.5304 14 17.0391 13.7893 17.4142 13.4142C17.7893 13.0391 18 12.5304 18 12V3C18 2.75 17.95 2.5 17.87 2.28L9.5 7.71Z"
+                              fill="#B89635"
+                            />
+                          </svg>
+                        </a>
+                        <a
+                          class="phone d-flex align-items-center justify-content-center"
+                          href="tel:0534444445"
+                        >
+                          <span>0534444445</span>
+                          <svg
+                            class="icon ms-1"
+                            width="20"
+                            height="20"
+                            viewBox="0 0 20 20"
+                            fill="none"
+                          >
+                            <path
+                              d="M14.6076 20C6.55254 20 0 13.4475 0 5.39243C0.00170702 4.07297 0.483248 2.79918 1.35483 1.80857C2.22641 0.817966 3.42853 0.17817 4.73703 0.00849117C5.00627 -0.0228908 5.27846 0.0332138 5.51334 0.168507C5.74823 0.3038 5.93333 0.511097 6.04128 0.759738L8.13851 5.65328C8.2197 5.84316 8.25266 6.05019 8.23446 6.2559C8.21625 6.46162 8.14744 6.65964 8.03417 6.83232L6.30212 9.48255C6.26154 9.54161 6.23727 9.61035 6.23177 9.6818C6.22627 9.75326 6.23975 9.82489 6.27082 9.88947C7.09319 11.5766 8.46077 12.9368 10.1523 13.75C10.215 13.7813 10.285 13.7949 10.3549 13.7894C10.4247 13.7839 10.4917 13.7594 10.5488 13.7187L13.1677 11.9763C13.3403 11.8586 13.5398 11.7864 13.7477 11.7664C13.9556 11.7463 14.1652 11.779 14.3572 11.8615L19.2403 13.9587C19.4889 14.0667 19.6962 14.2518 19.8315 14.4867C19.9668 14.7215 20.0229 14.9937 19.9915 15.263C19.8218 16.5715 19.182 17.7736 18.1914 18.6452C17.2008 19.5168 15.927 19.9983 14.6076 20ZM4.89354 0.832776H4.84137C3.73392 0.977125 2.71678 1.51932 1.97958 2.35826C1.24239 3.1972 0.83548 4.27561 0.834719 5.39243C0.837482 9.04437 2.28943 12.5459 4.87175 15.1283C7.45406 17.7106 10.9556 19.1625 14.6076 19.1653C15.7244 19.1645 16.8028 18.7576 17.6417 18.0204C18.4807 17.2832 19.0229 16.2661 19.1672 15.1586C19.1759 15.0687 19.1552 14.9784 19.1081 14.9012C19.0611 14.8241 18.9903 14.7643 18.9064 14.7308L14.0233 12.6336C13.9598 12.6054 13.8903 12.5935 13.8211 12.599C13.7518 12.6045 13.685 12.6271 13.6268 12.6649L11.0183 14.4074C10.8391 14.5291 10.6312 14.6018 10.4152 14.6182C10.1992 14.6347 9.98266 14.5944 9.78708 14.5013C7.93058 13.6016 6.42838 12.1067 5.51958 10.2547C5.42697 10.0594 5.38602 9.84373 5.40063 9.62816C5.41525 9.41259 5.48494 9.20438 5.60305 9.02345L7.33509 6.37322C7.3738 6.31533 7.397 6.24848 7.40248 6.17906C7.40796 6.10964 7.39553 6.03997 7.36639 5.97673L5.26916 1.09363C5.23989 1.01752 5.18844 0.951955 5.12146 0.905443C5.05448 0.858932 4.97508 0.833615 4.89354 0.832776Z"
+                              fill="#B89635"
+                            />
+                          </svg>
+                        </a>
+                      </div>
+                    </div>
+                    <div class="details-wrap my-4">
+                      <div class="details">
+                        <div class="row">
+                          <div class="col-md-6 d-flex align-items-center my-1">
+                            <h6 class="mb-0 font-regular">الجنسية:</h6>
+                            <p class="font-bold mb-0 ms-1">سعودي</p>
+                          </div>
+                          <div class="col-md-6 d-flex align-items-center my-1">
+                            <h6 class="mb-0 font-regular">تاريخ الميلاد:</h6>
+                            <p class="font-bold mb-0 ms-1">2/2/1997</p>
+                          </div>
+                          <div class="col-md-6 d-flex align-items-center my-1">
+                            <h6 class="mb-0 font-regular">محل الإقامة:</h6>
+                            <p class="font-bold mb-0 ms-1">السعودية</p>
+                          </div>
+                          <div class="col-md-6 d-flex align-items-center my-1">
+                            <h6 class="mb-0 font-regular">المؤهل:</h6>
+                            <p class="font-bold mb-0 ms-1">بكاليريوس</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="details">
+                        <div class="row">
+                          <div class="col-md-6 d-flex align-items-center my-1">
+                            <h6 class="mb-0 font-regular">المؤهل:</h6>
+                            <p class="font-bold mb-0 ms-1">بكاليريوس</p>
+                          </div>
+                          <div class="col-md-6 d-flex align-items-center my-1">
+                            <h6 class="mb-0 font-regular">تاريخ الإبتداء:</h6>
+                            <p class="font-bold mb-0 ms-1">2015</p>
+                          </div>
+                          <div class="col-md-6 d-flex align-items-center my-1">
+                            <h6 class="mb-0 font-regular">تاريخ الإنتهاء:</h6>
+                            <p class="font-bold mb-0 ms-1">2019</p>
+                          </div>
+                          <div class="col-md-6 d-flex align-items-center my-1">
+                            <h6 class="mb-0 font-regular">الدرجة:</h6>
+                            <p class="font-bold mb-0 ms-1">150</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="details">
+                        <div class="row">
+                          <div class="col-md-6 d-flex align-items-center my-1">
+                            <h6 class="mb-0 font-regular">مستوى الخبرة:</h6>
+                            <p class="font-bold mb-0 ms-1">متوسط</p>
+                          </div>
+                          <div class="col-md-6 d-flex align-items-center my-1">
+                            <h6 class="mb-0 font-regular">مهارات ال it:</h6>
+                            <p class="font-bold mb-0 ms-1">متوسط</p>
+                          </div>
+                          <div class="col-md-6 d-flex align-items-center my-1">
+                            <h6 class="mb-0 font-regular">الراتب المتوقع:</h6>
+                            <p class="font-bold mb-0 ms-1">5000 ر.س</p>
+                          </div>
+                          <div class="col-md-6 d-flex align-items-center my-1">
+                            <h6 class="mb-0 font-regular">اللغات:</h6>
+                            <p class="font-bold mb-0 ms-1">
+                              العربية, الإنجليزية
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="d-flex flex-column align-items-center">
+                      <a
+                        class="cv clr-main mb-2"
+                        href="assets/pdf/Ahmed-Mamdouh-resume.pdf"
+                        target="_blank"
+                        >السيرة الذاتية</a
+                      >
+                      <a
+                        class="intro-video clr-main"
+                        href="https://www.youtube.com/watch?v=qTUc_LaC48o&t=2s"
+                        target="_blank"
+                        >الفيديو التعريفي</a
+                      >
+                    </div>
+
+                    <div class="text-center mt-5">
+                      <button
+                        class="btn-green m-2"
+                        type="button"
+                        data-bs-dismiss="modal"
+                      >
+                        قبول المتقدم
+                      </button>
+                      <button
+                        class="btn-red m-2"
+                        type="button"
+                        data-bs-dismiss="modal"
+                      >
+                        رفض المتقدم
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div> -->
+      </div>
+      <!-- Deatails Modal -->
+      <div
+      class="modal deatails-modal  fade"
+      id="deatailsModal"
+      tabindex="-1"
+      aria-labelledby="deatailsModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content custom-card">
+          <button
+            type="button"
+            class="btn-close"
+            data-bs-dismiss="modal"
+            aria-label="Close"
+          ></button>
+          <div class="modal-body">
+          
+          </div>
+        </div>
+      </div>
+    </div>
+    </section>
+    <!-- End List -->
+
+    <!-- Start Script -->
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/main.js"></script>
+    <!-- End Script -->
+  </body>
+</html>

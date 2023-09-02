@@ -1,0 +1,159 @@
+/*** Color Pallete ***/
+$black:#000000;
+$black-1:#333333;
+$white:#FFFFFF;
+$offWhite:#F7F7F7;
+$mainColor:#B89635;
+$red:#FF0000;
+$green:#16D973;
+$grayShadow:#454550;
+$gray:#555555;
+$grayLight:#ECECEC;
+/*** Transition ***/
+$transitionFast: all 0.3s ease-in-out;
+$transitionSlow: all 0.6s ease-in-out;
+/*** Font Family  ***/
+@font-face {
+    font-family: 'fontLight';
+    src: url('../fonts/29ltbukralight.woff2') format('woff2'),
+        url('../fonts/29ltbukralight.woff') format('woff'),
+        url('../fonts/29ltbukralight.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'fontRegular';
+    src: url('../fonts/29ltbukraregular.woff2') format('woff2'),
+        url('../fonts/29ltbukraregular.woff') format('woff'),
+        url('../fonts/29ltbukraregular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'fontBold';
+    src: url('../fonts/29ltbukrabold.woff2') format('woff2'),
+        url('../fonts/29ltbukrabold.woff') format('woff'),
+        url('../fonts/29ltbukrabold.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'fontBoldItalic';
+    src: url('../../fonts/29ltbukrabolditalic.woff2') format('woff2'),
+        url('../../fonts/29ltbukrabolditalic.woff') format('woff'),
+        url('../../fonts/29ltbukrabolditalic.ttf') format('truetype');
+}
+
+$fontLight: 'fontLight';
+$fontRegular: 'fontRegular';
+$fontBold: 'fontBold';
+$fontBoldItalic: 'fontBoldItalic';
+
+// mixin Breakpoints
+@mixin breakpoints($point) {
+    @if ($point==desktop) {
+      @media (min-width: 1600px) {
+        @content;
+      }
+    }
+  
+    @else if ($point==large) {
+      @media (min-width: 1200px) and (max-width: 1599.98px) {
+        @content;
+      }
+    }
+  
+    @else if ($point==medium) {
+      @media (min-width: 992px) and (max-width: 1199.98px) {
+        @content;
+      }
+    }
+  
+    @else if ($point==small) {
+      @media (min-width: 576px) and (max-width: 991.98px) {
+        @content;
+      }
+    }
+  
+    @else if ($point==mobile) {
+      @media (max-width: 575.98px) {
+        @content;
+      }
+    }
+  }
+  
+  // mixin Breakpoints Minimum Width
+  @mixin breakpointsMinWidth($pointMinWidth) {
+    @if ($pointMinWidth==desktop) {
+      @media (min-width: 1600px) {
+        @content;
+      }
+    }
+  
+    @else if ($pointMinWidth==large) {
+      @media (min-width: 1200px) {
+        @content;
+      }
+    }
+  
+    @else if ($pointMinWidth==medium) {
+      @media (min-width: 992px) {
+        @content;
+      }
+    }
+  
+    @else if ($pointMinWidth==small) {
+      @media (min-width: 768px) {
+        @content;
+      }
+    }
+  
+    @else if ($pointMinWidth==mobile) {
+      @media (min-width: 576px) {
+        @content;
+      }
+    }
+  }
+  
+  // mixin Breakpoints Maximum Width
+  @mixin breakpointsMaxWidth($pointMaxWidth) {
+    @if ($pointMaxWidth==desktop) {
+      @media (max-width: 1599.98px) {
+        @content;
+      }
+    }
+  
+    @else if ($pointMaxWidth==large) {
+      @media (max-width: 1199.98px) {
+        @content;
+      }
+    }
+  
+    @else if ($pointMaxWidth==medium) {
+      @media (max-width: 991.98px) {
+        @content;
+      }
+    }
+  
+    @else if ($pointMaxWidth==small) {
+      @media (max-width: 767.98px) {
+        @content;
+      }
+    }
+  
+    @else if ($pointMaxWidth==mobile) {
+      @media (max-width: 575.98px) {
+        @content;
+      }
+    }
+  }
+  
+  
+  /*** Use Mixin breakpoints
+   @include breakpoints(desktop) {}
+  
+   @include breakpoints(large) {}
+  
+   @include breakpoints(medium) {}
+  
+   @include breakpoints(small) {}
+  
+   @include breakpoints(mobile) {}
+  ***/

@@ -1,0 +1,162 @@
+/*** Container ***/
+.container-layout {
+    width: 85%;
+    margin: auto;
+    @include breakpointsMaxWidth(mobile) {
+        width: 100%;
+        padding: 0 20px;
+    }
+}
+
+// Colors
+.clr-main {
+    color: $mainColor;
+}
+
+// Image Fit
+.img-fit {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+
+    &.contain {
+        object-fit: contain;
+    }
+
+    &.position-absolute {
+        width: 100%;
+        height: 100%;
+        inset: 0;
+        z-index: -1;
+    }
+}
+
+// Padding - Margin Section
+.py-section {
+    padding: {
+        top: 2.5rem;
+        bottom: 2.5rem;
+    };
+}
+
+.my-section {
+    margin: {
+        top: 2.5rem;
+        bottom: 2.5rem;
+    };
+}
+
+//Fonts
+.font-light {
+    font-family: $fontLight;
+}
+.font-regular {
+    font-family: $fontRegular;
+}
+.font-bold {
+    font-family: $fontBold;
+}
+.font-boldItalic {
+    font-family: $fontBoldItalic;
+}
+
+
+/*** Titles ***/
+.text-body {
+    font-family: $fontRegular;
+    @include breakpoints(desktop) {
+        font-size: 18px;
+    }
+
+    @include breakpoints(large) {
+        font-size: 16px;
+    }
+
+    @include breakpoints(medium) {
+        font-size: 14px;
+    }
+
+
+    @include breakpointsMaxWidth(small) {
+        font-size: 12px;
+    }
+}
+
+.title-lg {
+    @include breakpoints(desktop) {
+        font-size: 34px;
+    }
+
+    @include breakpoints(large) {
+        font-size: 32px;
+    }
+
+
+    @include breakpoints(medium){
+        font-size: 28px;
+    }
+
+
+    @include breakpointsMaxWidth(small) {
+        font-size: 22px;
+    }
+}
+
+.sub-title {
+    @include breakpoints(desktop) {
+        font-size: 26px;
+    }
+
+    @include breakpoints(large) {
+        font-size: 24px;
+    }
+
+
+    @include breakpoints(medium){
+        font-size: 22px;
+    }
+
+
+    @include breakpointsMaxWidth(small) {
+        font-size: 18px;
+    }
+}
+
+.description-sm {
+    font-size: 12px;
+}
+
+
+/*** Start Loader ***/
+.loader {
+    position: fixed;
+    inset: 0;
+    background-color: $black-1;
+    z-index: 99999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: $transitionFast;
+    .logo {
+        animation: animloader 2s linear infinite;
+    }
+    &.hide {
+        opacity: 0;
+        pointer-events: none;
+    }
+  }
+  
+  @keyframes animloader {
+    0% {
+        opacity: 1;
+    }
+    
+    50% {
+        opacity: .1;
+    }
+    100% {
+        opacity: 1;
+    }
+  } 
+/*** End Loader ***/

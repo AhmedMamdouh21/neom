@@ -1,0 +1,401 @@
+// @import url(./bootstrap.min.css);
+/*** Boostrap ***/
+@import url('./bootstrap.rtl.min.css');
+@import './scss/variables';
+@import './scss/buttons';
+@import './scss/custom';
+
+body {
+    @extend .text-body;
+}
+
+/*** Start NavBar ***/
+.navbar-fixed {
+    transition: $transitionFast;
+    .navbar-brand {
+        transition: $transitionFast;
+        @include breakpointsMaxWidth(mobile) {
+           max-width: 50px;
+        }
+    }
+    .navbar-nav {
+        .nav-item {
+            .nav-link {
+                color: $white;
+                transition: $transitionFast;
+                @extend .text-body;
+
+                padding: {
+                    right: 0.9rem;
+                    left: 0.9rem;
+                }
+
+                ;
+
+                &.active {
+                    @extend .font-bold;
+                    color: $mainColor;
+                }
+
+                &:hover {
+                    color: $mainColor;
+                }
+            }
+        }
+    }
+    &.scrolled {
+        background-color: $black-1;
+        padding: {
+            top: 0;
+            bottom: 0;
+        };
+        .navbar-brand {
+            transform: scale(0.7);
+        }
+        @include breakpointsMinWidth(medium) {
+        .navbar-nav {
+                .nav-item {
+                    .nav-link {
+                        font-size: 14px;
+                    }
+                }
+            }
+        }
+    }
+    .navbar-toggler {
+        z-index: 1;
+        height: 2rem;
+        box-shadow: none;
+        border: none;
+        .toggler-icon {
+            display: block;
+            width: 1.5rem;
+            height: 0.125rem;
+            background-color: $white;
+            transition: $transitionFast;
+            opacity: 1;
+            position: relative;
+
+            &:before,
+            &::after {
+                content: "";
+                position: absolute;
+                display: block;
+                width: 1.5rem;
+                height: 0.125rem;
+                background-color: $white;
+                transition: $transitionFast;
+                opacity: 1;
+            }
+            &:before {
+                top: -0.525rem;
+            }
+            &:after {
+                top: 0.525rem;
+            }
+        }
+        &:not(.collapsed) {
+            .toggler-icon {
+                background-color: transparent;
+                &:before,
+                &::after {
+                    top: 0px;
+                    margin-top: -0.5875rem;
+                }
+                &::before {
+                    transform: translateY(0.525rem) rotate(45deg);
+                }
+                &::after {
+                    transform: translateY(0.525rem) rotate(-45deg);
+                }
+            }
+        }
+    }
+    .navbar-collapse {
+        @include breakpointsMaxWidth(medium) {
+            display: block;
+            position: fixed;
+            inset: 0;
+            width: 100%;
+            height: 100vh;
+            overflow: hidden;
+            background-color: $black-1;
+            display: flex;
+            flex-flow: column;
+            align-items: center;
+            justify-content: center;
+            transition: $transitionFast;
+            opacity: 0;
+            pointer-events: none;
+            .nav-link {
+                text-align: center;
+            }
+            &.show {
+                opacity: 1;
+                pointer-events: all;
+            }
+        }
+       
+    }
+}
+
+/*** End NavBar ***/
+
+/*** Start header ***/
+.header {
+    position: relative;
+    height: 280px;
+    overflow: hidden;
+
+    &::before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        background-color: rgba($color: $black, $alpha: 0.7);
+        z-index: 1;
+    }
+
+    .banner {
+        position: absolute;
+        inset: 0;
+    }
+
+    .info {
+        position: relative;
+        z-index: 1;
+        color: $white;
+        padding: 2.5rem;
+    }
+}
+
+/*** End header ***/
+
+/*** Start Card List ***/
+.cards-list {
+    .container-cards {
+        &.checkAll {
+            .top {
+                .checkbox-group {
+                    opacity: 0.5;
+                    pointer-events: none;
+                }
+            }
+        }
+        .card-info {
+            padding: 1rem;
+            border: 1px solid rgba($color: $mainColor, $alpha: 0.26);
+            border-radius: 8px;
+            box-shadow: 0px 8px 24px 0px rgba($color: $grayShadow, $alpha: 0.1);
+           .dropdown {
+            .dropdown-menu {
+                border: none;
+                border-radius: 4px;
+                box-shadow: 0px 8px 24px 0px rgba($color: $grayShadow, $alpha: 0.1);
+                .dropdown-item {
+                    &.delete {
+                        color: $red;
+                        @extend .font-bold;
+                        @extend .description-sm;
+                        .icon {
+                            stroke: $red;
+                        }
+                        &:hover {
+                            background-color: rgba($color: $red
+                            , $alpha: 0.06);
+                        }
+                    }
+                }
+            }
+           }
+        }
+    }
+}
+
+// Style Card
+.custom-card {
+    .top {
+        .dropdown {
+            .dropdown-toggle {
+                background: none;
+                border: none;
+
+                &::after {
+                    display: none;
+                }
+            }
+        }
+    }
+
+    .img-person {
+        width: 108px;
+        height: 108px;
+        border-radius: 50%;
+        overflow: hidden;
+        background: linear-gradient(180deg, $mainColor 4.63%, $white 97.69%);
+        padding: 2px;
+    }
+    
+    .status {
+        position: relative;
+        padding-right: 20px;
+    
+        &::before {
+            content: '';
+            position: absolute;
+            right: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+        }
+    
+        &.reject {
+            color: $red;
+    
+            &::before {
+                background-color: $red;
+            }
+        }
+    
+        &.accept {
+            color: $green;
+    
+            &::before {
+                background-color: $green;
+            }
+        }
+    }
+    
+    .email {
+        color: $gray;
+    }
+    
+    .phone {
+        color: $black-1;
+    }
+    
+    .email,
+    .phone,
+    .cv,
+    .intro-video {
+        transition: $transitionFast;
+    
+        &:hover {
+            color: $mainColor;
+        }
+    }
+    
+    .details {
+        padding: 0.75rem;
+        border-width: 1px 0px;
+        border-style: solid;
+        border-color: $grayLight;
+        background-color: rgba($color: $mainColor, $alpha: 0.02);
+
+        * {
+            @extend .description-sm;
+        }
+    }
+}
+
+/*** End Card List ***/
+
+
+/*** CheckBox ***/
+.checkbox-group {
+    display: block;
+
+    input {
+        padding: 0;
+        height: initial;
+        width: initial;
+        margin-bottom: 0;
+        display: none;
+        cursor: pointer;
+        &.disabled+label {
+            opacity: 0.5;
+            pointer-events: none;
+        }
+        &:checked+label:after {
+            content: '';
+            display: block;
+            position: absolute;
+            top: 5px;
+            right: 9px;
+            width: 6px;
+            height: 14px;
+            border: solid $mainColor;
+            border-width: 0 2px 2px 0;
+            transform: rotate(45deg);
+        }
+    }
+
+    label {
+        position: relative;
+        cursor: pointer;
+        display: inline-flex;
+        align-items: center;
+
+        &:before {
+            content: '';
+            appearance: none;
+            background-color: transparent;
+            border: 2px solid $mainColor;
+            padding: 10px;
+            width: 24px;
+            height: 24px;
+            border-radius: 4px;
+            display: inline-block;
+            position: relative;
+            vertical-align: middle;
+            cursor: pointer;
+        }
+    }
+}
+/*** End CheckBox ***/
+
+/*** Start Modal ***/
+.deatails-modal {
+    /* width */
+    &::-webkit-scrollbar {
+        width: 4px;
+    }
+
+    /* Track */
+    &::-webkit-scrollbar-track {
+        background: $offWhite;
+    }
+
+    /* Handle */
+    &::-webkit-scrollbar-thumb {
+        background: $gray;
+    }
+
+    /* Handle on hover */
+    &::-webkit-scrollbar-thumb:hover {
+        background: $mainColor;
+    }
+
+    .modal-content {
+        background-color: $offWhite;
+        .btn-close {
+            position: absolute;
+            top: 1.5rem;
+            right: 1.5rem;
+            z-index: 1;
+            opacity: 1;
+        }
+        .modal-body {
+            padding: 2rem;
+            .details-wrap {
+                .details {
+                    &:not(:last-child) {
+                        border-bottom: none;
+                    }
+                }
+            }
+        }
+    }
+}
+/*** End Modal ***/

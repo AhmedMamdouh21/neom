@@ -1,0 +1,49 @@
+/*** Buttons ***/
+.btn-custom {
+
+    @extend .font-bold;
+    transition: $transitionFast;
+    will-change: transform;
+    transform-style: preserve-3d;
+    @include breakpointsMinWidth(mobile) {
+        padding: 10px 30px;
+        font-size: 14px;
+    }
+    @include breakpointsMaxWidth(mobile) {
+        padding: 8px 20px;
+        font-size: 10px;
+    }
+    &:hover {
+        transform: scale(0.96);
+    }
+}
+.btn-main {
+    @extend .btn-custom;
+    border: none;
+    border-radius: 4px;
+    background-color: $mainColor;
+    color: $white;
+}
+
+.btn-green {
+    @extend .btn-custom;
+    border: none;
+    border-radius: 7px;
+    background-color: $green;
+    color: $white;
+    box-shadow: 1.7px 1.7px 11.8px 0px rgba($color: $black
+    , $alpha: 0.25);
+
+}
+
+.btn-red {
+    @extend .btn-custom;
+    border: none;
+    border-radius: 7px;
+    background-color: rgba($color: $red
+    , $alpha: 0.06);
+    color: $red;
+    box-shadow: 1.7px 1.7px 11.8px 0px rgba($color: $black
+    , $alpha: 0.25);
+
+}
